@@ -40,7 +40,7 @@ private:
 
 
         Node(int value) : data(value), next(nullptr), prev(nullptr) {}
-    };
+    }
 
     Node* head;
     Node* tail;
