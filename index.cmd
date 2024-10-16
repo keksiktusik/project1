@@ -69,8 +69,8 @@ public:
             head->prev = newNode;
             head = newNode;
         }
-    };
-
+    }
+};
     /**
  * @brief Funkcja główna programu.
  * 
