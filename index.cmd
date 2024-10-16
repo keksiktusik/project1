@@ -89,6 +89,7 @@ public:
             tail = newNode;
         }
     }
+
 };
     /**
  * @brief Funkcja główna programu.
@@ -108,7 +109,7 @@ int main(){
       // Testowanie dodania elementu na koniec
     list.addToEnd(30);
     list.addToEnd(40);
-    
+
     int commit;
     cout<<"pierwszy commit"<<endl;
     cin>>commit;
