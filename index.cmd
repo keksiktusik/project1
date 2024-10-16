@@ -70,8 +70,7 @@ public:
             head = newNode;
         }
     }
-
-      /**
+ /**
      * @brief Dodanie elementu na koniec listy.
      * 
      * Tworzy nowy węzeł i umieszcza go na końcu listy. Jeśli lista była pusta, 
