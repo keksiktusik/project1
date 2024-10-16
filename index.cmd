@@ -6,6 +6,7 @@ int main(){
     cout<<"pierwszy commit"<<endl;
     cin>>commit;
 
+    //test
     return 0;
 
 }
