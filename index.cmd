@@ -40,7 +40,7 @@ private:
 
 
         Node(int value) : data(value), next(nullptr), prev(nullptr) {}
-    };
+    }
 
     Node* head;
     Node* tail;
@@ -69,8 +69,8 @@ public:
             head->prev = newNode;
             head = newNode;
         }
-    };
-
+    }
+};
     /**
  * @brief Funkcja główna programu.
  * 
