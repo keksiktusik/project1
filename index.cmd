@@ -70,6 +70,25 @@ public:
             head = newNode;
         }
     }
+
+      /**
+     * @brief Dodanie elementu na koniec listy.
+     * 
+     * Tworzy nowy węzeł i umieszcza go na końcu listy. Jeśli lista była pusta, 
+     * nowy węzeł staje się zarówno początkiem, jak i końcem listy.
+     * 
+     * @param value Wartość elementu do dodania na koniec listy.
+     */
+    void addToEnd(int value) {
+        Node* newNode = new Node(value);
+        if (!tail) {
+            head = tail = newNode;
+        } else {
+            tail->next = newNode;
+            newNode->prev = tail;
+            tail = newNode;
+        }
+    }
 };
     /**
  * @brief Funkcja główna programu.
@@ -85,6 +104,11 @@ int main(){
     //Testowanie dodania elementu na poczatek
     list.addToStart(10);
     list.addToStart(20);
+
+      // Testowanie dodania elementu na koniec
+    list.addToEnd(30);
+    list.addToEnd(40);
+    
     int commit;
     cout<<"pierwszy commit"<<endl;
     cin>>commit;
