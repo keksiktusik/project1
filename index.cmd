@@ -31,7 +31,7 @@ int main(){
     int commit;
     cout<<"pierwszy commit"<<endl;
     cin>>commit;
-    
-              return 0;
+
+    return 0;
 
 }
