@@ -8,6 +8,7 @@
 #include <iostream>
 using namespace std;
 
+
 /**
  * @class DoublyLinkedList
  * @brief Klasa reprezentująca dwukierunkową listę wiązaną.
@@ -37,6 +38,7 @@ private:
          * @param value Wartość do przechowania w węźle.
          */
 
+
         Node(int value) : data(value), next(nullptr), prev(nullptr) {}
     };
 
@@ -49,7 +51,6 @@ public:
      * @brief Konstruktor domyślny, inicjuje pustą listę.
      */
     DoublyLinkedList() : head(nullptr), tail(nullptr) {}
-
  /**
      * @brief Dodanie elementu na początek listy.
      * 
@@ -59,7 +60,6 @@ public:
      * @param value Wartość elementu do dodania na początek listy.
      */
 
-    // Dodanie elementu na początek listy
     void addToStart(int value) {
         Node* newNode = new Node(value);
         if (!head) {
@@ -69,7 +69,7 @@ public:
             head->prev = newNode;
             head = newNode;
         }
-    }
+    };
 
     /**
  * @brief Funkcja główna programu.
@@ -78,8 +78,13 @@ public:
  * 
  * @return Zwraca 0, jeśli program zakończył się poprawnie.
  */
- 
+
 int main(){
+    DoublyLinkedList list;
+
+    //Testowanie dodania elementu na poczatek
+    list.addToStart(10);
+    list.addToStart(20);
     int commit;
     cout<<"pierwszy commit"<<endl;
     cin>>commit;
