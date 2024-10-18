@@ -303,19 +303,31 @@ void DoublyLinkedList::clear() {
 int main(){
     DoublyLinkedList list;
 
-    //Testowanie dodania elementu na poczatek
-    list.addToStart(10);
-    list.addToStart(20);
+    list.addToStart(9);
+    list.addToStart(5);
+    list.addToEnd(1);
+     list.addAtIndex(2, 8);
+    // Wyświetlenie listy
+    list.display();
 
-      // Testowanie dodania elementu na koniec
-    list.addToEnd(30);
-    list.addToEnd(40);
+    // Wyświetlenie listy w odwrotnej kolejności
+    list.displayReverse();
 
-    int commit;
-    cout<<"pierwszy commit"<<endl;
-    cin>>commit;
-    do cofania próba
-    dalej do cofania
+    // Usunięcie elementu z początku
+    list.removeFromStart();
+    list.display();
+
+    // Usunięcie elementu z końca
+    list.removeFromEnd();
+    list.display();
+
+    // Usunięcie elementu z indeksu 1
+    list.removeAtIndex(1);
+    list.display();
+
+    // Czyszczenie listy
+    list.clear();
+    list.display();
 
     return 0;
 
