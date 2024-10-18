@@ -117,8 +117,4 @@ int main(){
 
     return 0;
 
-
-          dodaje na próbe cofania comitów
-         2222222
-         parent of b375fdb (proba1)
 }
