@@ -114,5 +114,5 @@ int main(){
     cin>>commit;
 
     return 0;
-
+próba do usunięcia commita 
 }
