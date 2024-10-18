@@ -113,6 +113,7 @@ int main(){
     cout<<"pierwszy commit"<<endl;
     cin>>commit;
     do cofania próba
+    dalej do cofania
 
     return 0;
 
