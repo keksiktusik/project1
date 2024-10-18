@@ -331,4 +331,5 @@ int main(){
 
     return 0;
     testuje cofanie commitów bo mi nie wyszlo wcześniej :<
+    jako ze o dwa commity to se robie drugi
 }
