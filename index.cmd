@@ -51,14 +51,98 @@ public:
      * @brief Konstruktor domyślny, inicjuje pustą listę.
      */
     DoublyLinkedList() : head(nullptr), tail(nullptr) {}
+ 
+void addToStart(int value) {
  /**
      * @brief Dodanie elementu na początek listy.
-     * 
+     * git 
      * Tworzy nowy węzeł i umieszcza go na początku listy. Jeśli lista była pusta, 
      * nowy węzeł staje się zarówno początkiem, jak i końcem listy.
      * 
      * @param value Wartość elementu do dodania na początek listy.
      */
+}
+
+ void addToEnd(int value) {
+
+ /**
+     * @brief Dodanie elementu na koniec listy.
+     * 
+     * Tworzy nowy węzeł i umieszcza go na końcu listy. Jeśli lista była pusta, 
+     * nowy węzeł staje się zarówno początkiem, jak i końcem listy.
+     * 
+     * @pargit am value Wartość elementu do dodania na koniec listy.
+     */
+      }
+
+     void addAtIndex(int index, int value);
+
+    /**
+     * @brief Usunięcie elementu z początku listy.
+     * 
+     * Usuwa pierwszy element z listy, jeśli lista nie jest pusta.
+     */
+    void removeFromStart();
+
+    /**
+     * @brief Usunięcie elementu z końca listy.
+     * 
+     * Usuwa ostatni element z listy, jeśli lista nie jest pusta.
+     */
+    void removeFromEnd();
+
+    /**
+     * @brief Usunięcie elementu pod wskazanym indeksem.
+     * 
+     * Usuwa węzeł z listy znajdujący się pod podanym indeksem.
+     * 
+     * @param index Indeks węzła do usunięcia.
+     */
+    void removeAtIndex(int index);
+
+    /**
+     * @brief Wyświetlenie całej listy.
+     * 
+     * Przechodzi przez listę od początku do końca i wyświetla dane każdego węzła.
+     */
+    void display();
+
+    /**
+     * @brief Wyświetlenie listy w odwrotnej kolejności.
+     * 
+     * Przechodzi przez listę od końca do początku i wyświetla dane każdego węzła.
+     */
+    void displayReverse();
+
+    /**
+     * @brief Wyświetlenie następnego elementu.
+     * 
+     * Wyświetla wartość następnego elementu po podanym węźle.
+     * 
+     * @param current Wskaźnik do bieżącego węzła.
+     */
+    void displayNext(Node* current);
+
+    /**
+     * @brief Wyświetlenie poprzedniego elementu.
+     * 
+     * Wyświetla wartość poprzedniego elementu przed podanym węzłem.
+     * 
+     * @param current Wskaźnik do bieżącego węzła.
+     */
+    void displayPrevious(Node* current);
+
+    /**
+     * @brief Czyszczenie całej listy.
+     * 
+     * Usuwa wszystkie elementy z listy, zwalniając pamięć.
+     */
+    void clear();
+
+    // Dodatkowe funkcje mogą znajdować się tutaj
+};
+
+// Implementacja metod
 
     void addToStart(int value) {
         Node* newNode = new Node(value);
@@ -70,14 +154,7 @@ public:
             head = newNode;
         }
     }
- /**
-     * @brief Dodanie elementu na koniec listy.
-     * 
-     * Tworzy nowy węzeł i umieszcza go na końcu listy. Jeśli lista była pusta, 
-     * nowy węzeł staje się zarówno początkiem, jak i końcem listy.
-     * 
-     * @param value Wartość elementu do dodania na koniec listy.
-     */
+    
     void addToEnd(int value) {
         Node* newNode = new Node(value);
         if (!tail) {
@@ -88,6 +165,129 @@ public:
             tail = newNode;
         }
     }
+    void DoublyLinkedList::addAtIndex(int index, int value) {
+    if (index <= 0) {
+        addToStart(value);
+        return;
+    }
+
+    Node* current = head;
+    int count = 0;
+
+    while (current && count < index) {
+        current = current->next;
+        count++;
+    }
+
+    if (!current) {
+        addToEnd(value);
+    } else {
+        Node* newNode = new Node(value);
+        newNode->prev = current->prev;
+        newNode->next = current;
+        if (current->prev) {
+            current->prev->next = newNode;
+        }
+        current->prev = newNode;
+        if (current == head) {
+            head = newNode;
+        }
+    }
+}
+
+void DoublyLinkedList::removeFromStart() {
+    if (!head) return;
+    Node* temp = head;
+    head = head->next;
+    if (head) {
+        head->prev = nullptr;
+    } else {
+        tail = nullptr;
+    }
+    delete temp;
+}
+
+void DoublyLinkedList::removeFromEnd() {
+    if (!tail) return;
+    Node* temp = tail;
+    tail = tail->prev;
+    if (tail) {
+        tail->next = nullptr;
+    } else {
+        head = nullptr;
+    }
+    delete temp;
+}
+
+void DoublyLinkedList::removeAtIndex(int index) {
+    if (index < 0 || !head) return;
+    if (index == 0) {
+        removeFromStart();
+        return;
+    }
+
+    Node* current = head;
+    int count = 0;
+
+    while (current && count < index) {
+        current = current->next;
+        count++;
+    }
+
+    if (current) {
+        if (current->prev) {
+            current->prev->next = current->next;
+        }
+        if (current->next) {
+            current->next->prev = current->prev;
+        }
+        if (current == head) {
+            head = current->next;
+        }
+        if (current == tail) {
+            tail = current->prev;
+        }
+        delete current;
+    }
+}
+
+void DoublyLinkedList::display() {
+    Node* current = head;
+    while (current) {
+        cout << current->data << " ";
+        current = current->next;
+    }
+    cout << endl;
+}
+
+void DoublyLinkedList::displayReverse() {
+    Node* current = tail;
+    while (current) {
+        cout << current->data << " ";
+        current = current->prev;
+    }
+    cout << endl;
+}
+
+void DoublyLinkedList::displayNext(Node* current) {
+    if (current && current->next) {
+        cout << current->next->data << endl;
+    }
+}
+
+void DoublyLinkedList::displayPrevious(Node* current) {
+    if (current && current->prev) {
+        cout << current->prev->data << endl;
+    }
+}
+
+void DoublyLinkedList::clear() {
+    while (head) {
+        removeFromStart();
+    }
+}
+
+/**
 
 };
     /**
@@ -105,7 +305,7 @@ int main(){
     list.addToStart(10);
     list.addToStart(20);
 
-      // Testowanie dodania elementu na koniec
+
     list.addToEnd(30);
     list.addToEnd(40);
 
