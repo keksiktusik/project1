@@ -114,5 +114,5 @@ int main(){
     cin>>commit;
 
     return 0;
-          dodaje na próbe cofania comitów
+
 }
