@@ -330,5 +330,5 @@ int main(){
     list.display();
 
     return 0;
-
+    testuje cofanie commitów bo mi nie wyszlo wcześniej :<
 }
