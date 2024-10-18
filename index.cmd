@@ -115,4 +115,5 @@ int main(){
 
     return 0;
           dodaje na próbe cofania comitów
+          2222222
 }
