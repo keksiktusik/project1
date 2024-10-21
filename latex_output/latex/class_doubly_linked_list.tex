@@ -1,0 +1,214 @@
+\doxysection{Doubly\+Linked\+List Class Reference}
+\hypertarget{class_doubly_linked_list}{}\label{class_doubly_linked_list}\index{DoublyLinkedList@{DoublyLinkedList}}
+
+
+Klasa reprezentująca dwukierunkową listę wiązaną.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_doubly_linked_list_a64b759ca82ca4b7767f42ba5691575f5}{Doubly\+Linked\+List}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny, inicjuje pustą listę. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_doubly_linked_list_a61cb19f0e9452a84c587c51c9217c191}{add\+To\+Start}} (int value)
+\begin{DoxyCompactList}\small\item\em Dodanie elementu na początek listy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_doubly_linked_list_a7cdaf46d1a83dc5878a9a33e77521a0f}{add\+To\+End}} (int value)
+\begin{DoxyCompactList}\small\item\em Dodanie elementu na koniec listy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_doubly_linked_list_a300a92a62e954dbd79b87e6e54a882ab}{add\+At\+Index}} (int index, int value)
+\begin{DoxyCompactList}\small\item\em Dodanie elementu pod wskazany indeks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_doubly_linked_list_aac2658ae4f12120c7adba251b9d62a4d}{remove\+From\+Start}} ()
+\begin{DoxyCompactList}\small\item\em Usunięcie elementu z początku listy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_doubly_linked_list_a3e9298e97c7b509ce7a63dcd54a04ee8}{remove\+From\+End}} ()
+\begin{DoxyCompactList}\small\item\em Usunięcie elementu z końca listy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_doubly_linked_list_ac47fb42dc1afdcc1593665661bee76d5}{remove\+At\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em Usunięcie elementu pod wskazanym indeksem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_doubly_linked_list_a5ff883860c056332038c50d36d37cd9d}{display}} ()
+\begin{DoxyCompactList}\small\item\em Wyświetlenie całej listy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_doubly_linked_list_a5b3f78265366e37a05c3b2fe61d17911}{display\+Reverse}} ()
+\begin{DoxyCompactList}\small\item\em Wyświetlenie listy w odwrotnej kolejności. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_doubly_linked_list_a11c345dbdef683ae45f11ae7ec4542ff}{display\+Next}} (Node \texorpdfstring{$\ast$}{*}current)
+\begin{DoxyCompactList}\small\item\em Wyświetlenie następnego elementu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_doubly_linked_list_ad813eaa2aed1bb5ce7f2d2c6a368ebe6}{display\+Previous}} (Node \texorpdfstring{$\ast$}{*}current)
+\begin{DoxyCompactList}\small\item\em Wyświetlenie poprzedniego elementu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_doubly_linked_list_a721a85d80d21942c74a5b834f8e1d08b}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Czyszczenie całej listy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentująca dwukierunkową listę wiązaną. 
+
+Ta klasa przechowuje węzły listy, umożliwia dodawanie elementów na początek, oraz w pełnej wersji będzie zawierała więcej funkcji operujących na liście. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_doubly_linked_list_a64b759ca82ca4b7767f42ba5691575f5}\index{DoublyLinkedList@{DoublyLinkedList}!DoublyLinkedList@{DoublyLinkedList}}
+\index{DoublyLinkedList@{DoublyLinkedList}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{DoublyLinkedList()}{DoublyLinkedList()}}
+{\footnotesize\ttfamily \label{class_doubly_linked_list_a64b759ca82ca4b7767f42ba5691575f5} 
+Doubly\+Linked\+List\+::\+Doubly\+Linked\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor domyślny, inicjuje pustą listę. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_doubly_linked_list_a300a92a62e954dbd79b87e6e54a882ab}\index{DoublyLinkedList@{DoublyLinkedList}!addAtIndex@{addAtIndex}}
+\index{addAtIndex@{addAtIndex}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{addAtIndex()}{addAtIndex()}}
+{\footnotesize\ttfamily \label{class_doubly_linked_list_a300a92a62e954dbd79b87e6e54a882ab} 
+void Doubly\+Linked\+List\+::add\+At\+Index (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{int}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Dodanie elementu pod wskazany indeks. 
+
+Dodaje nowy węzeł do listy na wskazanym indeksie. Jeśli indeks jest równy 0, element jest dodawany na początek. Jeśli indeks przekracza długość listy, element jest dodawany na koniec.
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Indeks, pod który ma być dodany nowy element. \\
+\hline
+{\em value} & Wartość elementu do dodania. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_doubly_linked_list_a7cdaf46d1a83dc5878a9a33e77521a0f}\index{DoublyLinkedList@{DoublyLinkedList}!addToEnd@{addToEnd}}
+\index{addToEnd@{addToEnd}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{addToEnd()}{addToEnd()}}
+{\footnotesize\ttfamily \label{class_doubly_linked_list_a7cdaf46d1a83dc5878a9a33e77521a0f} 
+void Doubly\+Linked\+List\+::add\+To\+End (\begin{DoxyParamCaption}\item[{int}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Dodanie elementu na koniec listy. 
+
+Tworzy nowy węzeł i umieszcza go na końcu listy. Jeśli lista była pusta, nowy węzeł staje się zarówno początkiem, jak i końcem listy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Wartość elementu do dodania na koniec listy. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_doubly_linked_list_a61cb19f0e9452a84c587c51c9217c191}\index{DoublyLinkedList@{DoublyLinkedList}!addToStart@{addToStart}}
+\index{addToStart@{addToStart}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{addToStart()}{addToStart()}}
+{\footnotesize\ttfamily \label{class_doubly_linked_list_a61cb19f0e9452a84c587c51c9217c191} 
+void Doubly\+Linked\+List\+::add\+To\+Start (\begin{DoxyParamCaption}\item[{int}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Dodanie elementu na początek listy. 
+
+Tworzy nowy węzeł i umieszcza go na początku listy. Jeśli lista była pusta, nowy węzeł staje się zarówno początkiem, jak i końcem listy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Wartość elementu do dodania na początek listy. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_doubly_linked_list_a721a85d80d21942c74a5b834f8e1d08b}\index{DoublyLinkedList@{DoublyLinkedList}!clear@{clear}}
+\index{clear@{clear}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_doubly_linked_list_a721a85d80d21942c74a5b834f8e1d08b} 
+void Doubly\+Linked\+List\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Czyszczenie całej listy. 
+
+Usuwa wszystkie elementy z listy, zwalniając pamięć. \Hypertarget{class_doubly_linked_list_a5ff883860c056332038c50d36d37cd9d}\index{DoublyLinkedList@{DoublyLinkedList}!display@{display}}
+\index{display@{display}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{class_doubly_linked_list_a5ff883860c056332038c50d36d37cd9d} 
+void Doubly\+Linked\+List\+::display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Wyświetlenie całej listy. 
+
+Przechodzi przez listę od początku do końca i wyświetla dane każdego węzła. \Hypertarget{class_doubly_linked_list_a11c345dbdef683ae45f11ae7ec4542ff}\index{DoublyLinkedList@{DoublyLinkedList}!displayNext@{displayNext}}
+\index{displayNext@{displayNext}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{displayNext()}{displayNext()}}
+{\footnotesize\ttfamily \label{class_doubly_linked_list_a11c345dbdef683ae45f11ae7ec4542ff} 
+void Doubly\+Linked\+List\+::display\+Next (\begin{DoxyParamCaption}\item[{Node \texorpdfstring{$\ast$}{*}}]{current}{}\end{DoxyParamCaption})}
+
+
+
+Wyświetlenie następnego elementu. 
+
+Wyświetla wartość następnego elementu po podanym węźle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & Wskaźnik do bieżącego węzła. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_doubly_linked_list_ad813eaa2aed1bb5ce7f2d2c6a368ebe6}\index{DoublyLinkedList@{DoublyLinkedList}!displayPrevious@{displayPrevious}}
+\index{displayPrevious@{displayPrevious}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{displayPrevious()}{displayPrevious()}}
+{\footnotesize\ttfamily \label{class_doubly_linked_list_ad813eaa2aed1bb5ce7f2d2c6a368ebe6} 
+void Doubly\+Linked\+List\+::display\+Previous (\begin{DoxyParamCaption}\item[{Node \texorpdfstring{$\ast$}{*}}]{current}{}\end{DoxyParamCaption})}
+
+
+
+Wyświetlenie poprzedniego elementu. 
+
+Wyświetla wartość poprzedniego elementu przed podanym węzłem.
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & Wskaźnik do bieżącego węzła. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_doubly_linked_list_a5b3f78265366e37a05c3b2fe61d17911}\index{DoublyLinkedList@{DoublyLinkedList}!displayReverse@{displayReverse}}
+\index{displayReverse@{displayReverse}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{displayReverse()}{displayReverse()}}
+{\footnotesize\ttfamily \label{class_doubly_linked_list_a5b3f78265366e37a05c3b2fe61d17911} 
+void Doubly\+Linked\+List\+::display\+Reverse (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Wyświetlenie listy w odwrotnej kolejności. 
+
+Przechodzi przez listę od końca do początku i wyświetla dane każdego węzła. \Hypertarget{class_doubly_linked_list_ac47fb42dc1afdcc1593665661bee76d5}\index{DoublyLinkedList@{DoublyLinkedList}!removeAtIndex@{removeAtIndex}}
+\index{removeAtIndex@{removeAtIndex}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{removeAtIndex()}{removeAtIndex()}}
+{\footnotesize\ttfamily \label{class_doubly_linked_list_ac47fb42dc1afdcc1593665661bee76d5} 
+void Doubly\+Linked\+List\+::remove\+At\+Index (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Usunięcie elementu pod wskazanym indeksem. 
+
+Usuwa węzeł z listy znajdujący się pod podanym indeksem. Jeśli indeks jest 0, usuwa pierwszy element. Jeśli indeks przekracza długość listy, operacja jest ignorowana.
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Indeks węzła do usunięcia. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_doubly_linked_list_a3e9298e97c7b509ce7a63dcd54a04ee8}\index{DoublyLinkedList@{DoublyLinkedList}!removeFromEnd@{removeFromEnd}}
+\index{removeFromEnd@{removeFromEnd}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{removeFromEnd()}{removeFromEnd()}}
+{\footnotesize\ttfamily \label{class_doubly_linked_list_a3e9298e97c7b509ce7a63dcd54a04ee8} 
+void Doubly\+Linked\+List\+::remove\+From\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Usunięcie elementu z końca listy. 
+
+Usuwa ostatni element z listy, jeśli lista nie jest pusta. \Hypertarget{class_doubly_linked_list_aac2658ae4f12120c7adba251b9d62a4d}\index{DoublyLinkedList@{DoublyLinkedList}!removeFromStart@{removeFromStart}}
+\index{removeFromStart@{removeFromStart}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{removeFromStart()}{removeFromStart()}}
+{\footnotesize\ttfamily \label{class_doubly_linked_list_aac2658ae4f12120c7adba251b9d62a4d} 
+void Doubly\+Linked\+List\+::remove\+From\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Usunięcie elementu z początku listy. 
+
+Usuwa pierwszy element z listy, jeśli lista nie jest pusta. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{index_8cpp}{index.\+cpp}}\end{DoxyCompactItemize}
